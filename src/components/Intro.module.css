@@ -9,13 +9,12 @@
     height: 100vh;
 }
 .singUp {
-    font-size: 1.5rem;
-    font-weight: bold;
-    position: fixed;
-    top: 20px;
-    right: 50%;
-    color: #5ED3F3;
-    background-color: transparent;
+    font-size: 1.2rem;
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    transform: translate3d(0, 50%, 0);
+    background-color: #5ED3F3;
     border: #5ED3F3;
     border-radius: 8px;
     cursor: pointer;
@@ -26,13 +25,13 @@
 
 @keyframes neon {
     0%, 39%, 41%, 59%, 61%, 100% {
-        text-shadow: 
-        #fff 0 15px 15px,
+        box-shadow: 
+        #fff 0 10px 15px,
         #074fea 0 15px 30px,
         #074fea 0 15px 40px;
     }
     40%, 60% {
-        text-shadow: none;
+        box-shadow: none;
     }
 }
 

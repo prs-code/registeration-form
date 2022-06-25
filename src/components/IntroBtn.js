@@ -6,7 +6,7 @@ import styles from './Intro.module.css';
 const IntroBtn = () => {
     return (
         <div className={styles.container}>
-                <Link className={styles.singUp} to="/SignUp">Sign Up</Link>
+                <Link to="/SignUp"><button className={styles.singUp}>Sign Up</button></Link>
         </div>
     );
 };

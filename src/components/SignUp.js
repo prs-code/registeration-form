@@ -1,4 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+
+import {validate} from "./validate";
 
 
 const SignUp = () => {
@@ -12,12 +14,21 @@ const SignUp = () => {
 
     const changeHandler = (event) => {
         if (event.target.name === "isAccepted") {
-            setData({...data, [event.target.name]: event.target.checked}) // check true or false
+            setData({...data, [event.target.name]: event.target.checked}) // if user click checkbox checked it(true or false)
         } else {
             setData({...data, [event.target.name]: event.target.value})
         }
         console.log(data);
     };
+
+
+    const [error, setError] = useState({});//access to errors object
+
+    useEffect(() => { //handle any error with data change (form field information)
+        setError(validate(data))
+        console.log(error);
+    }, [data]);
+
 
     return (
         <div>
