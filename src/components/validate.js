@@ -1,6 +1,5 @@
 export const validate = (data) => { //errors handler(check data in form fields)
     const errors = {};
-    const regexValidation = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
 
     if (!data.name.trim()) {
         errors.name = "Username is required!";
@@ -10,7 +9,7 @@ export const validate = (data) => { //errors handler(check data in form fields)
 
     if (!data.email) {
         errors.email = "Email is required!";
-    } else if (!/\S+@\.\S+/.test(data.email)) {
+    } else if (!/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(data.email)) {
         errors.email = "Email address is invalid!";
     } else {
         delete errors.email;
@@ -37,6 +36,5 @@ export const validate = (data) => { //errors handler(check data in form fields)
     } else {
         errors.isAccepted = "You must agree to the rules to enter";
     }
-
     return errors;
-}
+};

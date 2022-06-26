@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    background-image: url("../images/499226.jpg");
+    min-height: 100vh;
+    align-items: center;
+    background: blur(10px);
+}
+
+.form {
+    padding: 50px;
+    margin: 20px 20px;
+    background-color: rgba(0, 0, 0, 0.501); 
+    background-color: rgba(0, 0, 0, 0.54); 
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: fit-content;
+    text-align:start;
+}
+
+.header {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    height: 75px;
+}
+.formField span {
+    height: 15px;
+    text-align: left;
+    margin-top: 5px;
+    width: fit-content;
+    font-size: 0.005rem;
+    font-weight: lighter;
+    color: #fa4753;
+    line-height: 10px;
+    padding: 2px 3px;
+    border-radius: 3px;
+    background-color: rgba(250, 71, 83, .4);
+}
+.formField label {
+    text-align: left;
+    margin-bottom: 5px;
+    color: rgb(196, 196, 196);
+}
+
+.formInput {
+    width: 300px;
+    height: 30px;
+    border-radius: 8px;
+    padding: 0 10px;
+    border: 1px solid rgb(172, 172, 172);
+    transition: all .2 ease-in;
+}
+
+.uncompleted {
+    width: 300px;
+    height: 30px;
+    border-radius: 8px;
+    padding: 0 10px;
+    border: 1px solid #fa4753;
+    transition: all .2s ease-out;
+}
+
+.formInput:focus,
+.uncompleted:focus {
+    outline: none;
+    line-height: 30px;
+    height: 30px;
+    border: 2px solid #1a73e8;
+}
+
+.Btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Btn button {
+    background-color: #5ED3F3;
+    padding: 10px 20px;
+    color:rgb(111, 111, 111);
+    border-radius: 8px;
+    border: none;
+    font-size: .8rem;
+    font-weight: bold;
+    transition: all .1s ease-in-out;
+    cursor: pointer;
+}
+
+.Btn button:hover {
+    background-color: #00e0c6;
+}
+
+.Btn a {
+    color:#5ED3F3;
+    text-decoration: none;
+    transition: all .1s ease-in-out;
+    font-weight: bold;
+}
+
+.Btn a:hover {
+    color: #00e0c6;
+}
+
+input [type="chechbox"] {
+    margin-left: 20px;
+    width: 18px;
+    height: 18px;
+    
+}

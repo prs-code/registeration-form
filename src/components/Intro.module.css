@@ -5,14 +5,16 @@
 }
 .container {
     background-image: url("../images/499226.jpg");
-    -width: 100vh;
-    height: 100vh;
+    min-width: 100vh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 .singUp {
     font-size: 1.2rem;
     width: 100px;
     height: 40px;
-    color: #fff;
+    color: rgb(172, 172, 172);
     transform: translate3d(0, 50%, 0);
     background-color: #5ED3F3;
     border: #5ED3F3;
@@ -20,7 +22,6 @@
     cursor: pointer;
     animation: neon 4s infinite;
     opacity: .9;
-    text-decoration: none;
 }
 
 @keyframes neon {
@@ -36,6 +37,38 @@
 }
 
 .singUp:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.singIn {
+    font-size: 1.2rem;
+    width: 100px;
+    height: 40px;
+    color: rgb(172, 172, 172);
+    transform: translate3d(0, 50%, 0);
+    background-color: #00e0c6;
+    border: #00e0c6;
+    border-radius: 8px;
+    cursor: pointer;
+    animation: neon1 5s infinite;
+    opacity: .9;
+    margin: 0 30px;
+}
+
+@keyframes neon1 {
+    0%, 39%, 41%, 59%, 61%, 100% {
+        box-shadow: 
+        #fff 0 10px 15px,
+        #009393 0 15px 30px,
+        #009393 0 15px 40px;
+    }
+    40%, 60% {
+        box-shadow: none;
+    }
+}
+
+.singIn:hover {
     opacity: 1;
     text-decoration: underline;
 }
