@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {Link} from "react-router-dom";
 import styles from "./signIn.module.css";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
@@ -6,22 +7,14 @@ import {validate} from "./validate";
 import { notify } from './toast';
 
 
-
 const SignIn = () => {
     const [data, setData] = useState({
-        name: "",
         email: "",
         password: "",
-        confirmPassword: "",
-        isAccepted: false,
     });
 
     const changeHandler = (event) => {
-        if (event.target.name === "isAccepted") {
-            setData({...data, [event.target.name]: event.target.checked}) // if user click checkbox checked it(true or false)
-        } else {
             setData({...data, [event.target.name]: event.target.value})
-        }
     };
     
     
@@ -36,21 +29,18 @@ const SignIn = () => {
         event.preventDefault();
         notify();
         if (!Object.keys(error).length) {
-            notify("Sign Up Successfully", "success")
+            notify("Loged in Successfully", "success")
         } else {
             notify("Invalid data", "error")
             setTouch({
-                name: true,
                 email: true,
                 password: true,
-                confirmPassword: true,
-                isAccepted: true,
             })
         }
     }
 
     useEffect(() => { //handle any error with data change (form field information)
-        setError(validate(data))
+        setError(validate(data,"SignIn"))
     }, [data, touch]);
 
 
@@ -84,6 +74,7 @@ const SignIn = () => {
                 </div>
                 <div className={styles.Btn}>
                     <button type="submit" >Login</button>
+                    <Link to="/SignUp">sign up</Link>
                 </div>
            </form>
            <ToastContainer />

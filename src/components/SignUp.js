@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {Link} from "react-router-dom";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import {validate} from "./validate";
@@ -51,7 +52,7 @@ const SignUp = () => {
     }
 
     useEffect(() => { //handle any error with data change (form field information)
-        setError(validate(data))
+        setError(validate(data, "signup"))
     }, [data, touch]);
 
 
@@ -123,7 +124,7 @@ const SignUp = () => {
                     {error.isAccepted && touch.isAccepted && <span>{error.isAccepted}</span>}
                 </div>
                 <div className={styles.Btn}>
-                    <a href="./SignIn">Login</a>
+                    <Link to="/SignIn">Login</Link>
                     <button type="submit" >sign up</button>
                 </div>
            </form>

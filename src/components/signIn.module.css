@@ -28,13 +28,13 @@
     transform: translate(-50%, -50%);
     width: fit-content;
     text-align:start;
-    -webkit-animation: animatezoom 0.4s;
-    animation: animatezoom 0.4s;
+    /* -webkit-animation: animatezoom 0.4s;
+    animation: animatezoom 0.4s; */
 }
 
 /* create effect zoom on form */
 
-@-webkit-keyframes animatezoom {
+/* @-webkit-keyframes animatezoom {
     from {-webkit-transform: scale(0)}
     to {-webkit-transform: scale(1)}
   }
@@ -42,7 +42,7 @@
   @keyframes animatezoom {
     from {transform: scale(0)}
     to {transform: scale(1)}
-  }
+  } */
 
 .header {
     color: #fff;
@@ -104,6 +104,7 @@
 
 .Btn {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -120,10 +121,19 @@
     font-weight: bold;
     transition: all .1s ease-in-out;
     cursor: pointer;
+    margin-bottom: 15px;
 }
 
 .Btn button:hover {
    opacity: 1;
+}
+.Btn a {
+    text-decoration: none;
+    color: #1a73e8;
+}
+
+.Btn a:hover {
+    color: #5ED3F3;
 }
 
 

@@ -33,13 +33,13 @@
     transform: translate(-50%, -50%);
     width: fit-content;
     text-align:start;
-    -webkit-animation: animatezoom 0.4s;
-    animation: animatezoom 0.4s;
+    /* -webkit-animation: animatezoom 0.4s;
+    animation: animatezoom 0.4s; */
 }
 
 /* create effect zoom on form */
 
-@-webkit-keyframes animatezoom {
+/* @-webkit-keyframes animatezoom {
     from {-webkit-transform: scale(-1)}
     to {-webkit-transform: scale(1)}
   }
@@ -47,7 +47,7 @@
   @keyframes animatezoom {
     from {transform: scale(-1)}
     to {transform: scale(1)}
-  }
+  } */
 
 .header {
     color: #fff;
