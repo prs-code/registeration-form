@@ -5,7 +5,11 @@
 }
 .container {
     background-image: url("../images/499226.jpg");
-    min-width: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+   width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -71,4 +75,15 @@
 .singIn:hover {
     opacity: 1;
     text-decoration: underline;
+}
+
+@media (max-width: 867px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .singUp{
+        margin-top: 45px;
+    }
 }

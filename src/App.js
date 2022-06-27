@@ -4,6 +4,7 @@ import app from "./App.css";
 
 
 import IntroBtn from "./components/IntroBtn";
+import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 
 
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={ <IntroBtn /> }/>
         <Route path="/SignUp" element={ <SignUp />} />
+        <Route path="/SignIn" element={ <SignIn />} />
       </Routes>
 
     </div>
